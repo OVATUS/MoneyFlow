@@ -15,7 +15,7 @@ const ProenctedRout = ({ children }) => {
   const refreshToken = async () => {
     const refreshToken = localStorage.getItem(REFRESH_TOKEN);
     try {
-      const res = await api.post("/api/token/refresh/", {
+      const res = await api.post("api/token/refresh/", {
         refresh: refreshToken,
       });
       //  ข้อมูลที่จะส่งไปด้วย (body) refresh : refreshToken

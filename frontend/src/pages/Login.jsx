@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Form from '../Form'
+import Form from '../components/Form'
 
 const Login = () => {
   return <Form route="/api/token/" method="login"/>

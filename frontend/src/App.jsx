@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate  } from 'react-router-dom'
 import ProenctedRout from './components/ProenctedRout'
-import Login from './components/pages/Login'
-import NotFound from './components/pages/NotFound'
-import Home from './components/pages/Home'
-import Register from './components/pages/Register'
+import Login from './pages/Login'
+import NotFound from './pages/NotFound'
+import Home from './pages/Home'
+import Register from './pages/Register'
 function App() {
 
   const Logout= ()=>{
     localStorage.clear()
-    return <Navigate to ="/login"/>
+    return <Navigate to ="/"/>
   }
 
   return (
@@ -25,7 +25,7 @@ function App() {
           </ProenctedRout>
         }        
         />
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/' element={<Login/>}/>
         <Route path='/register' element ={<Register/>}/>
         <Route path='/logout' element ={<Logout/>}/>
         <Route path='*' element={<NotFound/>}/>
